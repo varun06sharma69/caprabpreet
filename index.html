@@ -4286,11 +4286,9 @@
         // ===== Page Navigation =====
         function showPage(pageId) {
             // Release any scroll lock first (menu or modal may be open)
-            if (document.body.style.position === 'fixed') {
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.left = '';
-                document.body.style.right = '';
+            if (document.body.style.overflow === 'hidden') {
+                document.body.style.overflow = '';
+                document.body.style.height = '';
             }
             // Close overlays
             var modal = document.getElementById('blogModal');
