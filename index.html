@@ -133,15 +133,16 @@
 
         /* ===== NAVIGATION ===== */
         .navbar {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: var(--shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: var(--transition);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            will-change: transform;
         }
 
         .navbar.scrolled {
@@ -4394,20 +4395,13 @@
         });
 
         // ===== Scroll lock helpers (iOS + Android safe) =====
-        var _lockScrollY = 0;
         function lockScroll() {
-            _lockScrollY = window.scrollY;
-            document.body.style.position = 'fixed';
-            document.body.style.top = '-' + _lockScrollY + 'px';
-            document.body.style.left = '0';
-            document.body.style.right = '0';
+            document.body.style.overflow = 'hidden';
+            document.body.style.height = '100%';
         }
         function unlockScroll() {
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.left = '';
-            document.body.style.right = '';
-            window.scrollTo(0, _lockScrollY);
+            document.body.style.overflow = '';
+            document.body.style.height = '';
         }
 
         // ===== Mobile menu toggle =====
