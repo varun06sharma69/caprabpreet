@@ -2221,6 +2221,84 @@
             flex-shrink: 0;
         }
 
+        /* ===== COMPACT NOTICE TABLE ===== */
+        .notice-table {
+            margin: 1.2rem 0 1.5rem;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .notice-row {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid var(--border-light);
+            border-left: 3px solid transparent;
+            transition: background 0.18s ease;
+        }
+
+        .notice-row:last-child { border-bottom: none; }
+        .notice-row:hover { background: var(--bg-light); }
+
+        .notice-row.urgent { border-left-color: #e53e3e; }
+        .notice-row.medium { border-left-color: #d69e2e; }
+        .notice-row.low    { border-left-color: var(--accent); }
+
+        .notice-row-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: rgba(15, 58, 125, 0.08);
+            padding: 0.22rem 0.6rem;
+            border-radius: 50px;
+            white-space: nowrap;
+            width: fit-content;
+        }
+
+        .notice-row.urgent .notice-row-badge { color: #c53030; background: rgba(229,62,62,0.1); }
+        .notice-row.medium .notice-row-badge { color: #b7791f; background: rgba(214,158,46,0.1); }
+        .notice-row.low    .notice-row-badge { color: #276749; background: rgba(56,161,105,0.1); }
+
+        .notice-row-title {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .notice-row-action {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .notice-inline-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1.2rem;
+            margin: 0.8rem 0 1.4rem;
+            font-size: 0.83rem;
+            color: var(--text-gray);
+        }
+
+        .notice-inline-features span::before {
+            content: '✓ ';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .notice-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.3rem 0.5rem;
+            }
+            .notice-row-action { text-align: left; }
+            .notice-row-title  { grid-column: 1 / -1; }
+        }
+
         /* ===== BLOG ===== */
         .blog-grid {
             display: grid;
