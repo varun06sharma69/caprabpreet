@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://varun06sharma69.github.io/caprabpreet/sitemap.xml
