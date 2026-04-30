@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -107,15 +107,16 @@
     <div id="home" class="page active">
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-container">
+            <div class="hero-inner">
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="dot"></span>
-                        <span>Available for new clients · Mon–Sat</span>
+                        <span>Available Mon–Sat &middot; Chandigarh, Punjab</span>
                     </div>
-                    <h1>CA Prabhpreet Singh</h1>
-                    <p class="hero-tagline">Tax notices. NRI filings. Property sales in India. That's the work.</p>
-                    <p class="hero-subtitle">Based in Chandigarh, Punjab. 20 years in practice — the last decade mostly NRIs across UK, Australia, USA, and Canada. If you have Indian money and don't live in India, I probably see cases like yours regularly.</p>
+                    <h1 class="hero-headline">Twenty years solving<br>India's most complex<br><em>tax problems.</em></h1>
+                    <div class="hero-gold-line"></div>
+                    <p class="hero-tagline">CA Prabhpreet Singh — NRI taxation, income tax notices, cross-border planning.</p>
+                    <p class="hero-subtitle">Based in Chandigarh. If you have Indian money and don't live in India, I probably see cases like yours regularly — across the UK, Australia, USA, and Canada.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary" onclick="showPage('contact'); return false;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg> Book Consultation</button>
                         <a href="tel:+918360888591" class="btn-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Contact Now</a>
@@ -126,23 +127,15 @@
                         <div class="hero-photo-deco"></div>
                         <div class="hero-photo-frame" onclick="showPage('about'); return false;" style="cursor:pointer;" title="Learn more about CA Prabhpreet Singh">
                             <img src="img/prabpreet.jpg" alt="CA Prabhpreet Singh, Chartered Accountant">
-                        </div>
-                        <div class="hero-photo-badge">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 2l2.39 7.36H22l-6.19 4.5L18.2 21 12 16.5 5.8 21l2.39-7.14L2 9.36h7.61L12 2z" />
-                            </svg>
-                            ICAI Certified
-                        </div>
-                        <div class="hero-photo-caption" onclick="showPage('about'); return false;" style="cursor:pointer;" title="Learn more about CA Prabhpreet Singh">
-                            <div class="name">CA Prabhpreet Singh</div>
-                            <div class="title">Chartered Accountant · NRI Tax Specialist</div>
+                            <div class="hero-photo-badge">ICAI Certified</div>
+                            <div class="hero-photo-caption" onclick="showPage('about'); return false;" style="cursor:pointer;">
+                                <div class="name">CA Prabhpreet Singh</div>
+                                <div class="title">Chartered Accountant · NRI Tax Specialist</div>
+                            </div>
                         </div>
                         <div class="hero-photo-chip chip-1">
                             <div class="hero-photo-chip-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 14l10 5 10-5-10-5z" />
-                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 14l10 5 10-5-10-5z"/></svg>
                             </div>
                             <div>
                                 <div class="hero-photo-chip-num">20+</div>
@@ -151,10 +144,7 @@
                         </div>
                         <div class="hero-photo-chip chip-2">
                             <div class="hero-photo-chip-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
-                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                             </div>
                             <div>
                                 <div class="hero-photo-chip-num">800+</div>
@@ -162,6 +152,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="hero-stats-strip">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">1,500+</span>
+                    <span class="hero-stat-label">ITRs Filed</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">150+</span>
+                    <span class="hero-stat-label">Notices Resolved</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">300+</span>
+                    <span class="hero-stat-label">Property Sales</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-num">25+</span>
+                    <span class="hero-stat-label">Countries Served</span>
                 </div>
             </div>
         </section>
@@ -307,6 +315,7 @@
         <!-- Services Section -->
         <section class="services">
             <div class="section-header">
+                <span class="section-eyebrow">Services</span>
                 <h2 class="section-title">What I Handle</h2>
                 <p class="section-subtitle">Nine areas. Most clients come in for one — and stay for two or three once the bigger picture becomes clear.</p>
             </div>
@@ -317,11 +326,10 @@
                             alt="Legal scales and law book">
                     </div>
                     <div class="service-body">
-                        <div class="service-icon">⚖️</div>
+                        <span class="service-category-label">Most Requested</span>
                         <h3>Tax Notice Handling</h3>
                         <p>Got a notice? Read it before you panic. Then call me. 150+ cases across Sec 143, 148, 156, 245 — every notice type has a specific process and most are recoverable if you act fast.</p>
-                        <a href="#" onclick="showService('service-notice'); return false;" class="service-link">Learn
-                            More →</a>
+                        <a href="#" onclick="showService('service-notice'); return false;" class="service-link">Learn More →</a>
                     </div>
                 </div>
                 <div class="service-card" onclick="if(!event.target.closest('a')) showService('service-taxation')">
@@ -435,30 +443,35 @@
         <section class="testimonials">
             <div class="testimonials-container">
                 <div class="testimonials-title">
+                    <span class="section-eyebrow">Client Stories</span>
                     <h2>In their own words</h2>
-                    <p style="font-size: 1.05rem; opacity: 0.95; margin-top: 0.5rem;">Real clients. Real situations. Names abbreviated for privacy.</p>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.4rem;">Real clients. Real situations. Names abbreviated for privacy.</p>
                 </div>
+                <!-- Featured testimonial -->
+                <div class="testimonial-featured">
+                    <span class="testimonial-featured-quote">&ldquo;</span>
+                    <p class="testimonial-featured-text">I'd been filing my Indian returns wrong for three years after moving to London — my previous CA had no idea how NRI taxation actually works. Prabhpreet fixed it in the first call, explained exactly what had gone wrong, and the DTAA refund we recovered covered his fees several times over.</p>
+                    <div class="testimonial-featured-meta">
+                        <span class="testimonial-featured-author">Rajesh M.</span>
+                        <span class="testimonial-featured-location">— London, UK</span>
+                    </div>
+                </div>
+                <!-- Supporting testimonials -->
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"I'd been filing my Indian returns wrong for three years after moving to London — my previous CA had no idea how NRI taxation actually works. Prabhpreet fixed it in the first call, explained exactly what had gone wrong, and the DTAA refund we recovered covered his fees several times over."</p>
-                        <p class="testimonial-author">Rajesh M.</p>
-                        <p class="testimonial-role">London, UK</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"Sold my parents' flat in Chandigarh from Canada and had no clue what I was doing. Two other CAs gave me wildly different TDS numbers — Prabhpreet explained the discrepancy, was right, and sorted the 15CB, repatriation and ITR filing after. No drama."</p>
                         <p class="testimonial-author">Priya S.</p>
                         <p class="testimonial-role">Canada</p>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"Got a Section 148 notice — eight years after the assessment year. I was in the US, the notice was at my old Indian address, and I found out late. Prabhpreet responded within hours, drafted the reply, handled everything. The demand was dropped."</p>
                         <p class="testimonial-author">Vikram S.</p>
                         <p class="testimonial-role">USA</p>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"Running a business in the UK while holding two properties in India was becoming a compliance nightmare. Prabhpreet cut through it clearly — explained what applied, what didn't, and handled the India-UK DTAA structuring properly. Four years in, still the same arrangement."</p>
                         <p class="testimonial-author">Sarah P.</p>
                         <p class="testimonial-role">Manchester, UK</p>
@@ -470,6 +483,7 @@
         <!-- Team Section -->
         <section class="team">
             <div class="section-header">
+                <span class="section-eyebrow">The People</span>
                 <h2 class="section-title">The Team</h2>
                 <p class="section-subtitle">Each person here handles a specific area. No generalists passed off as specialists.</p>
             </div>
