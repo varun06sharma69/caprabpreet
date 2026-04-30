@@ -1428,8 +1428,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 CA Prabhpreet Singh. All rights reserved. | <a href="#"
-                    style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#"
+            <p>&copy; 2026 CA Prabhpreet Singh. All rights reserved. | <a href="privacy-policy.html"
+                    style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="terms.html"
                     style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a> | <a href="#" onclick="reopenCookieConsent(); return false;"
                     style="color: rgba(255, 255, 255, 0.7);">Cookie Settings</a></p>
         </div>
@@ -2210,18 +2210,27 @@
                 try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
                 hideBanner();
             };
-            window.closeCookieConsent = function () {
-                setCookieConsent('rejected');
-            };
-            window.reopenCookieConsent = function () {
-                showBanner();
-            };
+            window.closeCookieConsent = function () { setCookieConsent('rejected'); };
+            window.reopenCookieConsent = function () { showBanner(); };
 
-            document.addEventListener('DOMContentLoaded', function () {
-                const stored = (function () { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } })();
-                if (!stored) {
-                    setTimeout(showBanner, 1500);
-                }
+            function maybeShow() {
+                var stored;
+                try { stored = localStorage.getItem(CONSENT_KEY); } catch (e) { stored = null; }
+                if (!stored) setTimeout(showBanner, 1500);
+            }
+
+            // readyState guard: DOMContentLoaded may have already fired on iOS
+            // (e.g. fast loads, or page restored from BFCache)
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', maybeShow);
+            } else {
+                maybeShow();
+            }
+
+            // iOS BFCache: when user taps Back, DOMContentLoaded does NOT re-fire.
+            // pageshow with persisted=true covers that case.
+            window.addEventListener('pageshow', function (e) {
+                if (e.persisted) maybeShow();
             });
         })();
     </script>
@@ -2238,7 +2247,7 @@
             </div>
             <p>We use cookies to improve your experience and analyse site usage. No personal data is sold. You can manage your preferences at any time.</p>
             <p class="cookie-links">
-                <a href="#">Privacy Policy</a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="#">Terms &amp; Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="terms.html">Terms &amp; Conditions</a>
             </p>
             <div class="cookie-buttons">
                 <button class="btn-cookie-accept" onclick="setCookieConsent('accepted')">Accept All</button>
