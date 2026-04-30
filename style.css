@@ -1432,7 +1432,7 @@ button,
         }
 
         .team-image {
-            height: 220px;
+            height: 280px;
             overflow: hidden;
             background: var(--parchment-mid);
         }
@@ -2399,6 +2399,10 @@ button,
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .team-image {
+                height: 300px;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr 1fr;
                 gap: 2rem;
@@ -2451,6 +2455,8 @@ button,
             .testimonial-featured-text { font-size: 1rem; }
 
             .team-grid { grid-template-columns: 1fr; }
+
+            .team-image { height: 320px; }
 
             .footer-content { grid-template-columns: 1fr; gap: 2rem; }
 
