@@ -2796,3 +2796,117 @@ button,
                 width: calc(100vw - 32px);
             }
         }
+
+/* ===== SCENARIOS SECTION (If you're here because...) ===== */
+.scenarios-section {
+    background: var(--parchment);
+    padding: var(--section-v) var(--pad);
+}
+.scenarios-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+}
+.scenarios-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    color: var(--text-heading);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    margin-top: 0.75rem;
+}
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2.5rem 3rem;
+}
+.scenario {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+}
+.scenario h3 {
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
+    color: var(--text-heading);
+    margin-bottom: 0.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.scenario p {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    margin-bottom: 0.75rem;
+}
+.scenario-cta {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.scenario-cta:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+    .scenario-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ===== PRACTICE NOTES ===== */
+.practice-notes {
+    background: var(--cream);
+    padding: var(--section-v) var(--pad);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.practice-notes-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+.practice-notes-header {
+    margin-bottom: 2.5rem;
+}
+.practice-notes-header h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    color: var(--text-heading);
+    font-weight: 400;
+    margin: 0.5rem 0 0.4rem;
+}
+.practice-notes-header p {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+.practice-note-entry {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 1.75rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+}
+.practice-note-entry:last-child { border-bottom: none; }
+.note-date {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-top: 0.3rem;
+    line-height: 1.4;
+}
+.note-text {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    margin: 0;
+}
+.note-text a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 600px) {
+    .practice-note-entry { grid-template-columns: 1fr; gap: 0.3rem; }
+    .note-date { padding-top: 0; }
+}
