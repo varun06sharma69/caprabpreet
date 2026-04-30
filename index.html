@@ -1430,7 +1430,8 @@
         <div class="footer-bottom">
             <p>&copy; 2026 CA Prabhpreet Singh. All rights reserved. | <a href="#"
                     style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#"
-                    style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
+                    style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a> | <a href="#" onclick="reopenCookieConsent(); return false;"
+                    style="color: rgba(255, 255, 255, 0.7);">Cookie Settings</a></p>
         </div>
     </footer>
 
@@ -2189,7 +2190,59 @@
         function closeModal() {
             document.body.classList.remove("modal-open");
         }
+
+        // ===== Cookie Consent =====
+        (function () {
+            const CONSENT_KEY = 'ca_cookie_consent';
+            const banner = document.getElementById('cookieConsent');
+            if (!banner) return;
+
+            function showBanner() {
+                banner.classList.add('visible');
+            }
+            function hideBanner() {
+                banner.classList.remove('visible');
+            }
+
+            window.setCookieConsent = function (value) {
+                try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+                hideBanner();
+            };
+            window.closeCookieConsent = function () {
+                setCookieConsent('rejected');
+            };
+            window.reopenCookieConsent = function () {
+                showBanner();
+            };
+
+            const stored = (function () { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } })();
+            if (!stored) {
+                setTimeout(showBanner, 1500);
+            }
+        })();
     </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" role="dialog" aria-label="Cookie consent">
+        <div class="cookie-accent"></div>
+        <div class="cookie-body">
+            <div class="cookie-header">
+                <svg class="cookie-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <h4>Your Privacy Matters</h4>
+            </div>
+            <p>We use cookies to improve your experience and analyse site usage. No personal data is sold. You can manage your preferences at any time.</p>
+            <p class="cookie-links">
+                <a href="#">Privacy Policy</a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="#">Terms &amp; Conditions</a>
+            </p>
+            <div class="cookie-buttons">
+                <button class="btn-cookie-accept" onclick="setCookieConsent('accepted')">Accept All</button>
+                <button class="btn-cookie-manage" onclick="setCookieConsent('managed')">Manage</button>
+                <button class="btn-cookie-reject" onclick="setCookieConsent('rejected')">Reject</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Auto-reload: polls for file changes and refreshes the browser -->
     <script>
