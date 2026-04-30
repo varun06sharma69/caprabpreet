@@ -2194,14 +2194,16 @@
         // ===== Cookie Consent =====
         (function () {
             const CONSENT_KEY = 'ca_cookie_consent';
-            const banner = document.getElementById('cookieConsent');
-            if (!banner) return;
+
+            function getBanner() { return document.getElementById('cookieConsent'); }
 
             function showBanner() {
-                banner.classList.add('visible');
+                const b = getBanner();
+                if (b) b.classList.add('visible');
             }
             function hideBanner() {
-                banner.classList.remove('visible');
+                const b = getBanner();
+                if (b) b.classList.remove('visible');
             }
 
             window.setCookieConsent = function (value) {
@@ -2215,10 +2217,12 @@
                 showBanner();
             };
 
-            const stored = (function () { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } })();
-            if (!stored) {
-                setTimeout(showBanner, 1500);
-            }
+            document.addEventListener('DOMContentLoaded', function () {
+                const stored = (function () { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } })();
+                if (!stored) {
+                    setTimeout(showBanner, 1500);
+                }
+            });
         })();
     </script>
 
