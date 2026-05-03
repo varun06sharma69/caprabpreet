@@ -917,6 +917,8 @@ h1, h2, h3, h4 {
 .team-card:hover .team-image img { transform: scale(1.04); filter: grayscale(0%); }
 
 .team-content { padding: 0.85rem 0 0; }
+.team-image--icon { display: flex; align-items: center; justify-content: center; background: var(--ink); }
+.team-image--icon svg { width: 72px; height: 72px; }
 
 .team-name {
     font-family: var(--font-serif);
@@ -1052,7 +1054,7 @@ h1, h2, h3, h4 {
 .about-overview-grid p { color: var(--text-body); line-height: 1.82; margin-bottom: 1.25rem; font-size: 1rem; }
 .about-overview-grid h2 { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400; color: var(--ink); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
 
-.about-overview-photo { border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-lg); }
+.about-overview-photo { border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-lg); position: sticky; top: 6rem; align-self: start; }
 .about-overview-photo img { width: 100%; height: 360px; object-fit: cover; object-position: top; display: block; }
 
 .credential-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -1261,6 +1263,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 4rem var
     .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
 
     .about-overview-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-overview-photo { position: static; order: -1; }
 
     .blog-grid { grid-template-columns: repeat(2, 1fr); }
 
