@@ -1262,8 +1262,9 @@ footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 4rem var
 
     .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
 
-    .about-overview-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-overview-photo { position: static; order: -1; }
+    .about-overview-grid { grid-template-columns: 1fr; gap: 2rem; grid-template-areas: "photo" "text"; }
+    .about-overview-grid > div:first-child { grid-area: text; }
+    .about-overview-photo { position: static; grid-area: photo; }
 
     .blog-grid { grid-template-columns: repeat(2, 1fr); }
 
