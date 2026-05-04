@@ -3,260 +3,661 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog &amp; Resources | CA Prabhpreet Singh</title>
-    <meta name="description" content="Expert guides on NRI taxation, income tax notices, DTAA, cross-border tax planning and more from CA Prabhpreet Singh — Chartered Accountant with 20+ years experience.">
+    <title>Blog &amp; Resources | Good Luck Consultant and Advisors</title>
+    <meta name="description" content="Expert guides on NRI taxation, income tax notices, DTAA, cross-border tax planning and more from CA Prabhpreet Singh — 18+ years of specialized experience.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="author" content="CA Prabhpreet Singh Malhotra">
     <link rel="canonical" href="https://varun06sharma69.github.io/caprabpreet/blog/">
-    <meta property="og:title" content="Blog &amp; Resources | CA Prabhpreet Singh">
+    <meta property="og:title" content="Blog &amp; Resources | Good Luck Consultant and Advisors">
     <meta property="og:description" content="Expert guides on NRI taxation, income tax notices, DTAA, and cross-border tax planning from CA Prabhpreet Singh.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://varun06sharma69.github.io/caprabpreet/blog/">
     <meta property="og:image" content="https://varun06sharma69.github.io/caprabpreet/img/prabpreet.jpg">
-    <meta property="og:site_name" content="CA Prabhpreet Singh">
+    <meta property="og:site_name" content="Good Luck Consultant and Advisors">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog &amp; Resources | CA Prabhpreet Singh">
+    <meta name="twitter:title" content="Blog &amp; Resources | Good Luck Consultant and Advisors">
     <meta name="twitter:description" content="Expert guides on NRI taxation, income tax notices, DTAA, and cross-border tax planning from CA Prabhpreet Singh.">
     <meta name="twitter:image" content="https://varun06sharma69.github.io/caprabpreet/img/prabpreet.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <style>
-        .blog-navbar{position:sticky;top:0;z-index:999;background:#0c3060;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
-        .blog-navbar-logo{color:#fff;font-weight:700;text-decoration:none;font-size:1rem;font-family:'Poppins',sans-serif}
-        .blog-navbar-links{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
-        .blog-navbar-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.875rem;font-weight:500}
-        .blog-navbar-links a:hover{color:#fff}
-        .blog-navbar-cta{background:#059669!important;color:#fff!important;padding:.4rem 1rem;border-radius:6px}
-        .blog-list-wrap{max-width:1100px;margin:0 auto;padding:3rem 1.5rem}
-        .blog-list-header{text-align:center;margin-bottom:3rem}
-        .blog-list-header h1{font-size:clamp(1.8rem,4vw,2.5rem);color:#111827;margin-bottom:.75rem;font-weight:700}
-        .blog-list-header p{color:#4b5563;max-width:600px;margin:0 auto;line-height:1.7}
-        .blog-list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
-        .blog-list-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid #e5e7eb;transition:box-shadow .2s,transform .2s}
-        .blog-list-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
-        .blog-list-card a{text-decoration:none;display:block;color:inherit}
-        .blog-list-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-        .blog-list-card-body{padding:1.25rem}
-        .blog-post-cat{display:inline-block;background:#0c3060;color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .65rem;border-radius:20px;margin-bottom:.5rem}
-        .blog-list-card-body h2{font-size:1rem;color:#111827;font-weight:700;margin:.4rem 0 .6rem;line-height:1.4}
-        .blog-list-card-body p{font-size:.875rem;color:#4b5563;line-height:1.6;margin-bottom:.75rem}
-        .blog-read-link{font-size:.85rem;color:#0c3060;font-weight:600}
-        .blog-footer{background:#071d3d;color:rgba(255,255,255,.6);text-align:center;padding:1.5rem;font-size:.85rem}
-        .blog-footer a{color:rgba(255,255,255,.8);text-decoration:none}
-        @media(max-width:600px){.blog-navbar-links{display:none}.blog-list-wrap{padding:2rem 1rem}}
+        /* Page-level overrides: navbar on standalone page */
+        .bl-navbar {
+            background: rgba(253,251,248,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1002;
+        }
+        .bl-nav-inner {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 1rem var(--pad);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bl-logo {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        .bl-nav-links {
+            display: flex;
+            gap: 2.25rem;
+            list-style: none;
+            align-items: center;
+        }
+        .bl-nav-links a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            position: relative;
+            letter-spacing: 0.01em;
+            transition: var(--transition);
+        }
+        .bl-nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1.5px;
+            bottom: -4px;
+            left: 0;
+            background: var(--gold);
+            transition: width 0.25s ease;
+        }
+        .bl-nav-links a:hover::after { width: 100%; }
+        .bl-nav-links a:hover { color: var(--ink); }
+        .bl-nav-links a.active-link { color: var(--ink); }
+        .bl-nav-links a.active-link::after { width: 100%; }
+        .bl-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.4rem;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .bl-mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--ink);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* Page header — reuse main site style */
+        .bl-page-header {
+            background: var(--ink);
+            padding: 5rem var(--pad) 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .bl-page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(200,169,110,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .bl-page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1.5px;
+            background: linear-gradient(to right, var(--gold), rgba(200,169,110,0.2), transparent);
+        }
+        .bl-page-header h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            color: #fff;
+            max-width: var(--container);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.02em;
+        }
+        .bl-page-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.55);
+            max-width: var(--container);
+            margin: 0.75rem auto 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Blog listing layout */
+        .bl-content {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 3.5rem var(--pad) 5rem;
+        }
+
+        /* Category filter bar */
+        .bl-filter-bar {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .bl-filter-btn {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.35rem 1rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+        }
+        .bl-filter-btn:hover,
+        .bl-filter-btn.active {
+            background: var(--ink);
+            color: var(--gold);
+            border-color: var(--ink);
+        }
+
+        /* Blog grid — matches main site blog grid */
+        .bl-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* Reuse main site .blog-card styles — just add the article wrapper */
+        .bl-grid article { display: flex; flex-direction: column; }
+        .bl-grid .blog-card { display: flex; flex-direction: column; height: 100%; }
+        .bl-grid .blog-content { flex: 1; display: flex; flex-direction: column; }
+        .bl-grid .blog-excerpt { flex: 1; }
+
+        /* CTA strip */
+        .bl-cta-strip {
+            background: var(--ink);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .bl-cta-strip::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(200,169,110,0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+        }
+        .bl-cta-strip-text { position: relative; z-index: 1; }
+        .bl-cta-strip-text h2 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
+        }
+        .bl-cta-strip-text p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .bl-cta-strip-btns { display: flex; gap: 0.85rem; flex-wrap: wrap; position: relative; z-index: 1; }
+
+        /* Footer */
+        .bl-footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.55);
+            padding: 3rem var(--pad) 0;
+        }
+        .bl-footer-inner {
+            max-width: var(--container);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .bl-footer h3 {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .bl-footer p { font-size: 0.875rem; line-height: 1.75; }
+        .bl-footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .bl-footer ul li a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .bl-footer ul li a:hover { color: var(--gold); }
+        .bl-footer-contact a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .bl-footer-contact a:hover { color: var(--gold); }
+        .bl-footer-contact p { margin-bottom: 0.4rem; }
+        .bl-footer-bottom {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 1.25rem 0 1.75rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.32);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .bl-footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+        .bl-footer-bottom a:hover { color: var(--gold); }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .bl-nav-links { display: none; }
+            .bl-mobile-toggle { display: flex; }
+            .bl-nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0; left: 0; right: 0;
+                background: var(--cream);
+                padding: 5rem 2rem 2rem;
+                z-index: 1001;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-lg);
+            }
+            .bl-grid { grid-template-columns: repeat(2, 1fr); }
+            .bl-cta-strip { flex-direction: column; text-align: center; }
+            .bl-cta-strip-btns { justify-content: center; }
+            .bl-footer-inner { grid-template-columns: 1fr 1fr; }
+            .bl-filter-bar { gap: 0.4rem; }
+        }
+        @media (max-width: 580px) {
+            .bl-grid { grid-template-columns: 1fr; }
+            .bl-footer-inner { grid-template-columns: 1fr; }
+            .bl-footer-bottom { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
-    <nav class="blog-navbar">
-        <a href="../" class="blog-navbar-logo">CA Prabhpreet Singh</a>
-        <ul class="blog-navbar-links">
-            <li><a href="../">Home</a></li>
-            <li><a href="../">Services</a></li>
-            <li><a href="./">Blog</a></li>
-            <li><a href="../" class="blog-navbar-cta">Book Consultation</a></li>
-        </ul>
+
+    <!-- Navbar -->
+    <nav class="bl-navbar">
+        <div class="bl-nav-inner">
+            <a href="../" class="bl-logo">Good Luck Consultant and Advisors</a>
+            <button class="bl-mobile-toggle" id="blToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="bl-nav-links" id="blNav">
+                <li><a href="../">Home</a></li>
+                <li><a href="../">About</a></li>
+                <li><a href="../">Services</a></li>
+                <li><a href="./" class="active-link">Blog</a></li>
+                <li><a href="../">FAQ</a></li>
+                <li><a href="../" class="cta-btn">Book Consultation</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Page Header -->
+    <header class="bl-page-header">
+        <h1>Blog &amp; Resources</h1>
+        <p class="bl-page-subtitle">Practical guides on the situations that actually come up — notices, NRI filings, property sales, cross-border rules. No filler.</p>
+    </header>
+
     <main>
-        <div class="blog-list-wrap">
-            <div class="blog-list-header">
-                <h1>Blog &amp; Resources</h1>
-                <p>Expert guides on NRI taxation, income tax notices, DTAA, and cross-border tax planning from CA Prabhpreet Singh — 20+ years of specialized experience.</p>
+        <div class="bl-content">
+
+            <!-- Category filter -->
+            <div class="bl-filter-bar">
+                <button class="bl-filter-btn active" data-cat="all">All Posts</button>
+                <button class="bl-filter-btn" data-cat="NRI Tax">NRI Tax</button>
+                <button class="bl-filter-btn" data-cat="Notice Guide">Notice Guide</button>
+                <button class="bl-filter-btn" data-cat="Property">Property</button>
+                <button class="bl-filter-btn" data-cat="Cross-Border Tax">Cross-Border</button>
+                <button class="bl-filter-btn" data-cat="Tax Saving">Tax Saving</button>
+                <button class="bl-filter-btn" data-cat="Compliance">Compliance</button>
+                <button class="bl-filter-btn" data-cat="Litigation">Litigation</button>
+                <button class="bl-filter-btn" data-cat="Africa Audit">Africa</button>
             </div>
-            <div class="blog-list-grid">
-                <article class="blog-list-card">
-                    <a href="dtaa-benefits-for-nris.html">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="DTAA benefits for NRIs" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">NRI Tax</span>
-                            <h2>Understanding DTAA Benefits for NRIs</h2>
-                            <p>How Double Taxation Avoidance Agreements can significantly reduce your tax burden and help you retain more of your income.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+            <!-- Blog grid -->
+            <div class="bl-grid" id="blGrid">
+
+                <article class="blog-card" data-cat="NRI Tax">
+                    <div class="blog-image">
+                        <span class="blog-category">NRI Tax</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="DTAA benefits for NRIs">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">Understanding DTAA Benefits for NRIs</h3>
+                        <p class="blog-excerpt">DTAA exists to stop you paying tax twice on the same income. Most NRIs have never actually claimed the benefits they're entitled to. Here's what it covers and how to use it.</p>
+                        <a href="dtaa-benefits-for-nris.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-property-sale-tax-guide.html">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="NRI property sale tax guide" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Property</span>
-                            <h2>NRI Property Sale: Complete Tax Guide</h2>
-                            <p>Navigate TDS, capital gains tax, Section 54 exemptions, Form 15CA/15CB, and fund repatriation when selling Indian property.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Property">
+                    <div class="blog-image">
+                        <span class="blog-category">Property</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="NRI property sale tax guide">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">NRI Property Sale: Complete Tax Guide</h3>
+                        <p class="blog-excerpt">The TDS the buyer deducts. The capital gains calculation. The 15CB you need before the money moves. The ITR filing after. Selling Indian property as an NRI has more steps than most people expect.</p>
+                        <a href="nri-property-sale-tax-guide.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="expanding-to-africa-audit-tax-guide.html">
-                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80" alt="India Africa business audit guide" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Africa Audit</span>
-                            <h2>Expanding to Africa? Your Audit &amp; Tax Compliance Guide</h2>
-                            <p>DTAA benefits, FEMA compliance, transfer pricing, and audit requirements for Indian businesses entering African markets.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Cross-Border Tax">
+                    <div class="blog-image">
+                        <span class="blog-category">Cross-Border Tax</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="Cross-border tax planning NRIs">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">Cross-Border Tax Planning: Complete Guide for NRIs &amp; Global Indians</h3>
+                        <p class="blog-excerpt">Living or working across multiple countries? Learn how strategic cross-border tax planning using DTAA treaties can legally eliminate double taxation and save you lakhs every year.</p>
+                        <a href="cross-border-tax-planning-nri-guide.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="cross-border-tax-planning-nri-guide.html">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="Cross-border tax planning for NRIs" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Cross-Border Tax</span>
-                            <h2>Cross-Border Tax Planning: Complete Guide for NRIs &amp; Global Indians</h2>
-                            <p>Strategies to legally eliminate double taxation on Indian income using DTAA treaties — India-Australia, India-UK, India-USA.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Notice Guide">
+                    <div class="blog-image">
+                        <span class="blog-category">Notice Guide</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80" alt="Section 148 income escaping assessment notice">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">Section 148 Income Escaping Assessment: Do Not Ignore This</h3>
+                        <p class="blog-excerpt">The department can reopen assessments up to 10 years back. Understand the 148A show-cause procedure and why a well-drafted reply can stop the notice entirely.</p>
+                        <a href="section-148-income-escaping-assessment.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-tax-saving-strategies.html">
-                        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80" alt="NRI tax saving strategies India" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Tax Saving</span>
-                            <h2>5 Tax-Saving Strategies Every NRI Should Know</h2>
-                            <p>Proven legal strategies: DTAA claims, NRE accounts, capital gains planning, Section 80C deductions, and ITR filing for refunds.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Notice Guide">
+                    <div class="blog-image">
+                        <span class="blog-category">Notice Guide</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80" alt="Section 143(2) scrutiny notice guide">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">Section 143(2) Scrutiny Notice: Complete Response Guide</h3>
+                        <p class="blog-excerpt">Your return is under detailed scrutiny — what happens next? We explain the full process, documents required, and how to protect yourself during assessment.</p>
+                        <a href="section-143-2-scrutiny-notice-guide.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-residency-status-tax-implications.html">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="NRI residency status tax implications" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Compliance</span>
-                            <h2>Residency Status &amp; Its Tax Implications for Indians Abroad</h2>
-                            <p>Resident, NRI, and RNOR categories explained — and how each status determines what income is taxable in India.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Africa Audit">
+                    <div class="blog-image">
+                        <span class="blog-category">Africa Audit</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80" alt="India Africa business audit guide">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">April 2026</p>
+                        <h3 class="blog-title">Expanding to Africa? Your Audit &amp; Tax Compliance Guide</h3>
+                        <p class="blog-excerpt">A complete guide for Indian businesses entering African markets — audit requirements, DTAA benefits, FEMA compliance, and cross-border tax obligations.</p>
+                        <a href="expanding-to-africa-audit-tax-guide.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="income-tax-notice-what-to-do.html">
-                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" alt="Income tax notice response guide India" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Litigation</span>
-                            <h2>Income Tax Notice Received? Here's Exactly What to Do</h2>
-                            <p>Step-by-step guide to reading, identifying, and responding to all types of income tax notices in India.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Cross-Border Tax">
+                    <div class="blog-image">
+                        <span class="blog-category">Cross-Border Tax</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="India UK DTAA guide for British NRIs">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">March 2026</p>
+                        <h3 class="blog-title">India-UK DTAA: Complete Tax Guide for British NRIs</h3>
+                        <p class="blog-excerpt">Living in the UK with Indian income? The India-UK treaty covers dividends, interest, capital gains, and rental income. Exactly how to use it to avoid paying tax twice.</p>
+                        <a href="india-uk-dtaa-guide-nri.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-143-2-scrutiny-notice-guide.html">
-                        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80" alt="Section 143(2) scrutiny notice guide" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Notice Guide</span>
-                            <h2>Section 143(2) Scrutiny Notice: Complete Response Guide</h2>
-                            <p>Why your return was selected, your legal rights, documents required, the assessment process, and how to appeal additions.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="NRI Tax">
+                    <div class="blog-image">
+                        <span class="blog-category">NRI Tax</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="NRI rental income tax India">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">March 2026</p>
+                        <h3 class="blog-title">NRI Rental Income Tax in India: TDS, ITR Filing &amp; Repatriation</h3>
+                        <p class="blog-excerpt">Your tenant must deduct 30% TDS on rent paid to an NRI. How to reduce that, file your ITR, claim DTAA credit abroad, and legally repatriate the money — step by step.</p>
+                        <a href="nri-rental-income-tax-india.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-148-income-escaping-assessment.html">
-                        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80" alt="Section 148 income escaping assessment notice" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Notice Guide</span>
-                            <h2>Section 148 Income Escaping Assessment: Do Not Ignore This</h2>
-                            <p>The department can reopen assessments up to 10 years back. Understand the 148A procedure and why immediate action is critical.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Tax Saving">
+                    <div class="blog-image">
+                        <span class="blog-category">Tax Saving</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80" alt="NRI tax saving strategies India">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">March 2026</p>
+                        <h3 class="blog-title">5 Tax-Saving Strategies Every NRI Should Know</h3>
+                        <p class="blog-excerpt">Five specific things that save NRIs money on Indian tax — not in theory, but in actual practice. Most of these never get claimed because people don't know they apply to NRIs.</p>
+                        <a href="nri-tax-saving-strategies.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-156-demand-notice.html">
-                        <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=800&q=80" alt="Section 156 demand notice India" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Notice Guide</span>
-                            <h2>Section 156 Demand Notice: Pay, Dispute, or Appeal?</h2>
-                            <p>You have 30 days to act. Learn when to pay, when to dispute, how to get a stay of demand, and how to appeal an incorrect assessment.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Notice Guide">
+                    <div class="blog-image">
+                        <span class="blog-category">Notice Guide</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=800&q=80" alt="Section 156 demand notice India">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">March 2026</p>
+                        <h3 class="blog-title">Section 156 Demand Notice: Pay, Dispute, or Appeal?</h3>
+                        <p class="blog-excerpt">Received a tax demand from the Income Tax Department? You have 30 days. When to pay, when to dispute, how to get a stay of demand, and how to appeal an incorrect assessment.</p>
+                        <a href="section-156-demand-notice.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-139-9-defective-return.html">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Section 139(9) defective return notice" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Notice Guide</span>
-                            <h2>Section 139(9) Defective Return: Fix It in 15 Days</h2>
-                            <p>Your ITR has a technical error. Understand the common defects, your 15-day window to fix it, and how to respond online.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Notice Guide">
+                    <div class="blog-image">
+                        <span class="blog-category">Notice Guide</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Section 139(9) defective return notice">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">March 2026</p>
+                        <h3 class="blog-title">Section 139(9) Defective Return: Fix It in 15 Days</h3>
+                        <p class="blog-excerpt">A defective return notice means your ITR is incomplete in the eyes of the law. Common defects, how to rectify within 15 days, and how to avoid your return being invalidated.</p>
+                        <a href="section-139-9-defective-return.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-245-refund-adjustment-notice.html">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Section 245 refund adjustment notice" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Notice Guide</span>
-                            <h2>Section 245 Notice: Why Your Refund Is Being Adjusted</h2>
-                            <p>Your refund is being absorbed against old tax dues. Know when to agree, when to dispute, and how to recover your refund.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Compliance">
+                    <div class="blog-image">
+                        <span class="blog-category">Compliance</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="NRI residency status tax implications">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">February 2026</p>
+                        <h3 class="blog-title">Residency Status &amp; Its Tax Implications for Indians Abroad</h3>
+                        <p class="blog-excerpt">Resident, NRI, RNOR — each status changes what India can tax you on. If you've been abroad for a few years and recently returned, this one matters a lot.</p>
+                        <a href="nri-residency-status-tax-implications.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-lower-tds-certificate-section-197.html">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Lower TDS certificate NRI property sale Section 197" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">NRI Tax</span>
-                            <h2>Lower TDS Certificate for NRI Property Sale: Section 197 Guide</h2>
-                            <p>NRIs selling property face 20–30% TDS upfront. A Section 197 certificate from the Assessing Officer can reduce this to match your actual tax liability.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Litigation">
+                    <div class="blog-image">
+                        <span class="blog-category">Litigation</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" alt="Income tax notice response guide India">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">February 2026</p>
+                        <h3 class="blog-title">Income Tax Notice Received? Here's Exactly What to Do</h3>
+                        <p class="blog-excerpt">The notice arrived and it looks alarming. Read the section number, check the deadline, don't respond without knowing what you're agreeing to. Step by step.</p>
+                        <a href="income-tax-notice-what-to-do.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-rental-income-tax-india.html">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="NRI rental income tax India TDS compliance" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">NRI Tax</span>
-                            <h2>NRI Rental Income Tax in India: TDS, Filing &amp; Repatriation 2025</h2>
-                            <p>Tenants must deduct 30% TDS on rent paid to NRIs. Learn the full compliance chain — TDS, ITR filing, DTAA credits, and how to repatriate rental income legally.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="NRI Tax">
+                    <div class="blog-image">
+                        <span class="blog-category">NRI Tax</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Lower TDS certificate Section 197 NRI property">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">February 2026</p>
+                        <h3 class="blog-title">Lower TDS Certificate for NRI Property Sale: Section 197 Guide</h3>
+                        <p class="blog-excerpt">TDS at 20% on the full sale price is often far more than your actual capital gains tax. Apply for a lower deduction certificate under Section 197 before your property sale closes.</p>
+                        <a href="nri-lower-tds-certificate-section-197.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="india-uk-dtaa-guide-nri.html">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="India UK DTAA guide for British NRIs" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Cross-Border Tax</span>
-                            <h2>India-UK DTAA: Complete Tax Guide for British NRIs 2025</h2>
-                            <p>How the India-UK Double Taxation Agreement works for salary, rent, capital gains, and dividends — and how to claim DTAA benefits on both the Indian ITR and UK Self Assessment.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Notice Guide">
+                    <div class="blog-image">
+                        <span class="blog-category">Notice Guide</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Section 245 refund adjustment notice">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">February 2026</p>
+                        <h3 class="blog-title">Section 245 Notice: Why Your Refund Is Being Adjusted</h3>
+                        <p class="blog-excerpt">Your refund was absorbed against old tax dues — is this legal? Know exactly what Section 245 allows, how to dispute an incorrect adjustment, and recover your refund.</p>
+                        <a href="section-245-refund-adjustment-notice.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="nri-inherited-property-india-tax.html">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="NRI inherited property India tax repatriation" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Property</span>
-                            <h2>Inherited Property in India as an NRI: Tax, TDS &amp; Repatriation</h2>
-                            <p>No inheritance tax — but selling inherited Indian property attracts capital gains, TDS obligations, and FEMA repatriation rules. Full step-by-step guide for NRIs.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Property">
+                    <div class="blog-image">
+                        <span class="blog-category">Property</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Inherited property India NRI tax repatriation">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">January 2026</p>
+                        <h3 class="blog-title">Inherited Property in India as an NRI: Tax, TDS &amp; Repatriation</h3>
+                        <p class="blog-excerpt">No tax on inheritance itself — but selling it, receiving rent, or repatriating money all trigger obligations. Know exactly what applies before you act.</p>
+                        <a href="nri-inherited-property-india-tax.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
-                <article class="blog-list-card">
-                    <a href="section-54-54ec-capital-gains-exemption-nri.html">
-                        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80" alt="Section 54 54EC capital gains exemption NRI" loading="lazy">
-                        <div class="blog-list-card-body">
-                            <span class="blog-post-cat">Tax Saving</span>
-                            <h2>Section 54 &amp; 54EC Capital Gains Exemption: Complete NRI Guide 2025</h2>
-                            <p>Legally eliminate your 20% LTCG tax on Indian property — reinvest in a new property (Section 54) or NHAI/REC bonds (Section 54EC). Full guide with deadlines and NRI-specific rules.</p>
-                            <span class="blog-read-link">Read More →</span>
-                        </div>
-                    </a>
+
+                <article class="blog-card" data-cat="Tax Saving">
+                    <div class="blog-image">
+                        <span class="blog-category">Tax Saving</span>
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80" alt="Section 54 54EC capital gains exemption NRI">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">January 2026</p>
+                        <h3 class="blog-title">Section 54 &amp; 54EC Capital Gains Exemption: Complete NRI Guide</h3>
+                        <p class="blog-excerpt">Sold a property and facing a large capital gains bill? Sections 54 and 54EC let you reinvest the gains into another property or bonds and reduce your tax to zero.</p>
+                        <a href="section-54-54ec-capital-gains-exemption-nri.html" class="blog-read-more">Read More →</a>
+                    </div>
                 </article>
+
+            </div><!-- /bl-grid -->
+
+            <!-- CTA Strip -->
+            <div class="bl-cta-strip">
+                <div class="bl-cta-strip-text">
+                    <h2>Have a specific situation?</h2>
+                    <p>CA Prabhpreet Singh — 18+ years. 800+ NRI clients. First call is free.</p>
+                </div>
+                <div class="bl-cta-strip-btns">
+                    <a href="../" class="btn-primary">Book Free Consultation</a>
+                    <a href="tel:+918360888591" style="display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.75rem;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);text-decoration:none;font-size:.875rem;font-weight:600;transition:var(--transition);">+91 836 088 8591</a>
+                </div>
+            </div>
+
+        </div><!-- /bl-content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bl-footer">
+        <div class="bl-footer-inner">
+            <div>
+                <h3>Good Luck Consultant and Advisors</h3>
+                <p>CA Prabhpreet Singh — 18 years in practice. NRI taxation, income tax notices, cross-border tax planning, GST, company incorporation. Every case personally handled.</p>
+            </div>
+            <div>
+                <h3>Topics</h3>
+                <ul>
+                    <li><a href="dtaa-benefits-for-nris.html">DTAA Benefits for NRIs</a></li>
+                    <li><a href="nri-property-sale-tax-guide.html">NRI Property Sale</a></li>
+                    <li><a href="section-148-income-escaping-assessment.html">Section 148 Notice</a></li>
+                    <li><a href="cross-border-tax-planning-nri-guide.html">Cross-Border Tax Planning</a></li>
+                    <li><a href="income-tax-notice-what-to-do.html">Income Tax Notices</a></li>
+                    <li><a href="nri-residency-status-tax-implications.html">NRI Residency Status</a></li>
+                </ul>
+            </div>
+            <div class="bl-footer-contact">
+                <h3>Contact</h3>
+                <p>📞 <a href="tel:+918360888591">+91 836 088 8591</a></p>
+                <p>📞 <a href="tel:+61403865645">+61 403 865 645</a></p>
+                <p>📧 <a href="mailto:Prabhpreet@tdfconsultant.com">Prabhpreet@tdfconsultant.com</a></p>
+                <p>💬 <a href="https://wa.me/61403865645" target="_blank" rel="noopener">Available on WhatsApp</a></p>
+                <p style="margin-top:.75rem;font-size:.8rem;color:rgba(255,255,255,0.4);">⏰ Mon–Fri, 10:30 AM – 5:30 PM IST</p>
             </div>
         </div>
-    </main>
-    <footer class="blog-footer">
-        <p>&copy; 2026 CA Prabhpreet Singh Malhotra | <a href="../">Back to Home</a> | <a href="tel:+918360888591">+91 836 088 8591</a></p>
+        <div class="bl-footer-bottom">
+            <span>&copy; 2026 Good Luck Consultant and Advisors. All rights reserved.</span>
+            <span><a href="../">Home</a> &nbsp;|&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="../terms.html">Terms</a></span>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('blToggle');
+        const nav = document.getElementById('blNav');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+                nav.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            document.querySelector('.bl-navbar').style.boxShadow =
+                window.scrollY > 10 ? '0 1px 0 var(--border), var(--shadow)' : '';
+        }, { passive: true });
+
+        // Category filter
+        const filterBtns = document.querySelectorAll('.bl-filter-btn');
+        const cards = document.querySelectorAll('#blGrid article');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.cat;
+                cards.forEach(card => {
+                    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
