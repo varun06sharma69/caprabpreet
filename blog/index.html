@@ -7,6 +7,7 @@
     <meta name="description" content="Expert guides on NRI taxation, income tax notices, DTAA, cross-border tax planning and more from CA Prabhpreet Singh — 18+ years of specialized experience.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="author" content="CA Prabhpreet Singh Malhotra">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230D1B2A'/><text x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='400' fill='%23C8A96E' text-anchor='middle'>CA</text></svg>">
     <link rel="canonical" href="https://varun06sharma69.github.io/caprabpreet/blog/">
     <meta property="og:title" content="Blog &amp; Resources | Good Luck Consultant and Advisors">
     <meta property="og:description" content="Expert guides on NRI taxation, income tax notices, DTAA, and cross-border tax planning from CA Prabhpreet Singh.">
@@ -23,80 +24,19 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <style>
-        /* Page-level overrides: navbar on standalone page */
-        .bl-navbar {
-            background: rgba(253,251,248,0.97);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1002;
+        /* Page enter / exit transitions */
+        @keyframes bl-page-in {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
-        .bl-nav-inner {
-            max-width: var(--container);
-            margin: 0 auto;
-            padding: 1rem var(--pad);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @keyframes bl-page-out {
+            from { opacity: 1; transform: translateY(0); }
+            to   { opacity: 0; transform: translateY(-6px); }
         }
-        .bl-logo {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--ink);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-        .bl-nav-links {
-            display: flex;
-            gap: 2.25rem;
-            list-style: none;
-            align-items: center;
-        }
-        .bl-nav-links a {
-            color: var(--text-body);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            position: relative;
-            letter-spacing: 0.01em;
-            transition: var(--transition);
-        }
-        .bl-nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1.5px;
-            bottom: -4px;
-            left: 0;
-            background: var(--gold);
-            transition: width 0.25s ease;
-        }
-        .bl-nav-links a:hover::after { width: 100%; }
-        .bl-nav-links a:hover { color: var(--ink); }
-        .bl-nav-links a.active-link { color: var(--ink); }
-        .bl-nav-links a.active-link::after { width: 100%; }
-        .bl-mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.4rem;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .bl-mobile-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--ink);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
+        body { animation: bl-page-in 0.3s ease forwards; }
+        body.page-exit { animation: bl-page-out 0.22s ease forwards !important; }
 
-        /* Page header — reuse main site style */
+        /* Dark hero page header */
         .bl-page-header {
             background: var(--ink);
             padding: 5rem var(--pad) 3.5rem;
@@ -174,18 +114,44 @@
             border-color: var(--ink);
         }
 
-        /* Blog grid — matches main site blog grid */
+        /* Blog grid */
         .bl-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
-
-        /* Reuse main site .blog-card styles — just add the article wrapper */
         .bl-grid article { display: flex; flex-direction: column; }
         .bl-grid .blog-card { display: flex; flex-direction: column; height: 100%; }
         .bl-grid .blog-content { flex: 1; display: flex; flex-direction: column; }
         .bl-grid .blog-excerpt { flex: 1; }
+
+        /* Pagination */
+        .bl-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        .bl-page-btn {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+            min-width: 2.5rem;
+        }
+        .bl-page-btn:hover { background: var(--ink); color: var(--gold); border-color: var(--ink); }
+        .bl-page-btn.active { background: var(--ink); color: var(--gold); border-color: var(--ink); }
+        .bl-page-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+        .bl-page-info { font-size: 0.8rem; color: var(--text-muted); margin-left: 0.5rem; }
 
         /* CTA strip */
         .bl-cta-strip {
@@ -217,115 +183,73 @@
             margin-bottom: 0.4rem;
             letter-spacing: -0.01em;
         }
-        .bl-cta-strip-text p {
-            color: rgba(255,255,255,0.55);
-            font-size: 0.9rem;
-            margin: 0;
-        }
+        .bl-cta-strip-text p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin: 0; }
         .bl-cta-strip-btns { display: flex; gap: 0.85rem; flex-wrap: wrap; position: relative; z-index: 1; }
 
-        /* Footer */
-        .bl-footer {
-            background: var(--ink);
-            color: rgba(255,255,255,0.55);
-            padding: 3rem var(--pad) 0;
-        }
-        .bl-footer-inner {
-            max-width: var(--container);
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.6fr 1fr 1fr;
-            gap: 2.5rem;
-            padding-bottom: 2.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-        }
-        .bl-footer h3 {
-            font-family: var(--font-serif);
-            font-size: 1.05rem;
-            font-weight: 400;
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-        .bl-footer p { font-size: 0.875rem; line-height: 1.75; }
-        .bl-footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-        .bl-footer ul li a {
-            color: rgba(255,255,255,0.55);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-        .bl-footer ul li a:hover { color: var(--gold); }
-        .bl-footer-contact a {
-            color: rgba(255,255,255,0.65);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-        .bl-footer-contact a:hover { color: var(--gold); }
-        .bl-footer-contact p { margin-bottom: 0.4rem; }
-        .bl-footer-bottom {
-            max-width: var(--container);
-            margin: 0 auto;
-            padding: 1.25rem 0 1.75rem;
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.32);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .bl-footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
-        .bl-footer-bottom a:hover { color: var(--gold); }
-
-        /* Mobile */
+        /* Responsive */
         @media (max-width: 900px) {
-            .bl-nav-links { display: none; }
-            .bl-mobile-toggle { display: flex; }
-            .bl-nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 0; left: 0; right: 0;
-                background: var(--cream);
-                padding: 5rem 2rem 2rem;
-                z-index: 1001;
-                gap: 1.5rem;
-                border-bottom: 1px solid var(--border);
-                box-shadow: var(--shadow-lg);
-            }
             .bl-grid { grid-template-columns: repeat(2, 1fr); }
             .bl-cta-strip { flex-direction: column; text-align: center; }
             .bl-cta-strip-btns { justify-content: center; }
-            .bl-footer-inner { grid-template-columns: 1fr 1fr; }
-            .bl-filter-bar { gap: 0.4rem; }
         }
         @media (max-width: 580px) {
             .bl-grid { grid-template-columns: 1fr; }
-            .bl-footer-inner { grid-template-columns: 1fr; }
-            .bl-footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="bl-navbar">
-        <div class="bl-nav-inner">
-            <a href="../" class="bl-logo">Good Luck Consultant and Advisors</a>
-            <button class="bl-mobile-toggle" id="blToggle" aria-label="Toggle menu" aria-expanded="false">
+    <!-- Reading Progress Bar -->
+    <div id="readingProgress"></div>
+
+    <!-- Floating Social Sidebar -->
+    <aside class="social-sidebar" aria-label="Social media links">
+        <a href="https://wa.me/61403865645" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="Contact us on WhatsApp">
+            <span class="social-tooltip">WhatsApp</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/61589014497271" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Follow us on Facebook">
+            <span class="social-tooltip">Facebook</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#ffffff" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/consultantgoodluck/" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Follow us on Instagram">
+            <span class="social-tooltip">Instagram</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#ffffff" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+    </aside>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+    <!-- Navigation (identical to main page) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">Good Luck Consultant and Advisors</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="bl-nav-links" id="blNav">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="../">Home</a></li>
-                <li><a href="../">About</a></li>
-                <li><a href="../">Services</a></li>
-                <li><a href="./" class="active-link">Blog</a></li>
-                <li><a href="../">FAQ</a></li>
-                <li><a href="../" class="cta-btn">Book Consultation</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#services">Services</a></li>
+                <li><a href="./" class="nav-active">Blog</a></li>
+                <li><a href="../#faq">FAQ</a></li>
+                <li><button class="cta-btn" onclick="navigateTo('../#contact')">Contact</button></li>
+                <li class="nav-social-mobile">
+                    <a href="https://wa.me/61403865645" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/61589014497271" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/consultantgoodluck/" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <!-- Page Header -->
     <header class="bl-page-header">
@@ -575,6 +499,9 @@
 
             </div><!-- /bl-grid -->
 
+            <!-- Pagination -->
+            <div class="bl-pagination" id="blPagination"></div>
+
             <!-- CTA Strip -->
             <div class="bl-cta-strip">
                 <div class="bl-cta-strip-text">
@@ -582,7 +509,7 @@
                     <p>CA Prabhpreet Singh — 18+ years. 800+ NRI clients. First call is free.</p>
                 </div>
                 <div class="bl-cta-strip-btns">
-                    <a href="../" class="btn-primary">Book Free Consultation</a>
+                    <a href="../#contact" class="btn-primary">Book Free Consultation</a>
                     <a href="tel:+918360888591" style="display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.75rem;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);text-decoration:none;font-size:.875rem;font-weight:600;transition:var(--transition);">+91 836 088 8591</a>
                 </div>
             </div>
@@ -590,73 +517,243 @@
         </div><!-- /bl-content -->
     </main>
 
-    <!-- Footer -->
-    <footer class="bl-footer">
-        <div class="bl-footer-inner">
-            <div>
-                <h3>Good Luck Consultant and Advisors</h3>
-                <p>CA Prabhpreet Singh — 18 years in practice. NRI taxation, income tax notices, cross-border tax planning, GST, company incorporation. Every case personally handled.</p>
+    <!-- Footer (identical to main page) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CA Prabhpreet Singh</h3>
+                <p>CA in Ludhiana, Punjab, India. 18 years in practice. NRI taxation, income tax notices, cross-border tax planning, GST, company incorporation, loan &amp; finance, property sales. Every case personally handled.</p>
             </div>
-            <div>
-                <h3>Topics</h3>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="dtaa-benefits-for-nris.html">DTAA Benefits for NRIs</a></li>
-                    <li><a href="nri-property-sale-tax-guide.html">NRI Property Sale</a></li>
-                    <li><a href="section-148-income-escaping-assessment.html">Section 148 Notice</a></li>
-                    <li><a href="cross-border-tax-planning-nri-guide.html">Cross-Border Tax Planning</a></li>
-                    <li><a href="income-tax-notice-what-to-do.html">Income Tax Notices</a></li>
-                    <li><a href="nri-residency-status-tax-implications.html">NRI Residency Status</a></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../#about">About</a></li>
+                    <li><a href="../#services">Services</a></li>
+                    <li><a href="./">Blog</a></li>
+                    <li><a href="../#faq">FAQ</a></li>
                 </ul>
             </div>
-            <div class="bl-footer-contact">
-                <h3>Contact</h3>
-                <p>📞 <a href="tel:+918360888591">+91 836 088 8591</a></p>
-                <p>📞 <a href="tel:+61403865645">+61 403 865 645</a></p>
-                <p>📧 <a href="mailto:Prabhpreet@tdfconsultant.com">Prabhpreet@tdfconsultant.com</a></p>
-                <p>💬 <a href="https://wa.me/61403865645" target="_blank" rel="noopener">Available on WhatsApp</a></p>
-                <p style="margin-top:.75rem;font-size:.8rem;color:rgba(255,255,255,0.4);">⏰ Mon–Fri, 10:30 AM – 5:30 PM IST</p>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="../#services">Taxation Services</a></li>
+                    <li><a href="../#services">NRI Advisory</a></li>
+                    <li><a href="../#services">Cross-Border Tax Planning</a></li>
+                    <li><a href="../#services">Property Advisory</a></li>
+                    <li><a href="../#services">Investment Advisory</a></li>
+                    <li><a href="../#services">Africa Audit Services</a></li>
+                    <li><a href="../#services">GST Services India</a></li>
+                    <li><a href="../#services">Company Incorporation</a></li>
+                    <li><a href="../#services">Loan &amp; Finance Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Branches</h3>
+                <ul class="branch-list">
+                    <li>
+                        <a href="https://share.google/VkTErKHApxRTGBAXt" target="_blank" rel="noopener" class="branch-link">
+                            <span class="branch-icon">📍</span>
+                            <span>
+                                <span class="branch-name">Ludhiana — Head Office</span>
+                                10/B, Model Town Extension<br>Ludhiana, Punjab 141002, India
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pearls+Omaxe+Tower+2+Netaji+Subhash+Place+Delhi+110034" target="_blank" rel="noopener" class="branch-link">
+                            <span class="branch-icon">📍</span>
+                            <span>
+                                <span class="branch-name">Delhi — Branch Office</span>
+                                1215, 12th Floor, Pearls Omaxe<br>Tower 2, NSP, Delhi 110034
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://share.google/XCUYjp4V9M42bkkhw" target="_blank" rel="noopener" class="branch-link">
+                            <span class="branch-icon">📍</span>
+                            <span>
+                                <span class="branch-name">Australia — Branch Office</span>
+                                35 Gladstone Ave<br>Kilburn SA 5084, Australia
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>📞 <a href="tel:+918360888591" class="contact-link">+91 836 088 8591</a></p>
+                <p>📞 <a href="tel:+61403865645" class="contact-link">+61 403 865 645</a></p>
+                <p>📧 <a href="mailto:Prabhpreet@tdfconsultant.com" class="contact-link">Prabhpreet@tdfconsultant.com</a></p>
+                <p>📧 <a href="mailto:Prabhpreetfca@gmail.com" class="contact-link">Prabhpreetfca@gmail.com</a></p>
+                <p>💬 <a href="https://wa.me/61403865645" target="_blank" rel="noopener" class="contact-link">Available on WhatsApp</a></p>
+                <p>📘 <a href="https://www.facebook.com/61589014497271" target="_blank" rel="noopener" class="contact-link">Follow us on Facebook</a></p>
+                <p>📷 <a href="https://www.instagram.com/consultantgoodluck/" target="_blank" rel="noopener" class="contact-link">Follow us on Instagram</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">⏰ Mon–Fri, 10:30 AM – 5:30 PM IST</p>
             </div>
         </div>
-        <div class="bl-footer-bottom">
-            <span>&copy; 2026 Good Luck Consultant and Advisors. All rights reserved.</span>
-            <span><a href="../">Home</a> &nbsp;|&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="../terms.html">Terms</a></span>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CA Prabhpreet Singh. All rights reserved. | <a href="../privacy-policy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="../terms.html" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const toggle = document.getElementById('blToggle');
-        const nav = document.getElementById('blNav');
-        toggle.addEventListener('click', () => {
-            const open = nav.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open);
+        // ===== Navbar height CSS variable =====
+        function setNavbarHeight() {
+            const nav = document.getElementById('navbar');
+            if (nav) document.documentElement.style.setProperty('--navbar-h', nav.offsetHeight + 'px');
+        }
+        setNavbarHeight();
+        window.addEventListener('resize', setNavbarHeight, { passive: true });
+        window.addEventListener('orientationchange', setNavbarHeight, { passive: true });
+        window.addEventListener('scroll', setNavbarHeight, { passive: true });
+
+        // ===== Scroll-to-top + navbar scroll effect =====
+        function scrollToTop() {
+            try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
+        }
+
+        let scrollTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    const navbar = document.getElementById('navbar');
+                    const scrollToTopBtn = document.getElementById('scrollToTop');
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    if (scrollTop > 100) {
+                        if (navbar) navbar.classList.add('scrolled');
+                        if (scrollToTopBtn) scrollToTopBtn.classList.add('visible');
+                    } else {
+                        if (navbar) navbar.classList.remove('scrolled');
+                        if (scrollToTopBtn) scrollToTopBtn.classList.remove('visible');
+                    }
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
+
+        // ===== Scroll lock helpers =====
+        function lockScroll() {
+            document.body.style.overflow = 'hidden';
+            document.body.style.height = '100%';
+        }
+        function unlockScroll() {
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+        }
+
+        // ===== Mobile menu =====
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navBackdrop = document.getElementById('navBackdrop');
+
+        function closeMobileMenu() {
+            if (navLinks) navLinks.classList.remove('open');
+            if (mobileToggle) {
+                mobileToggle.classList.remove('open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (navBackdrop) navBackdrop.classList.remove('show');
+            unlockScroll();
+            setTimeout(setNavbarHeight, 320);
+        }
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                mobileToggle.classList.toggle('open');
+                mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                if (navBackdrop) navBackdrop.classList.toggle('show', isOpen);
+                if (isOpen) { lockScroll(); } else { unlockScroll(); }
+                setTimeout(setNavbarHeight, 0);
+                setTimeout(setNavbarHeight, 320);
+            });
+        }
+        if (navBackdrop) navBackdrop.addEventListener('click', closeMobileMenu);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks && navLinks.classList.contains('open')) closeMobileMenu();
         });
-        document.addEventListener('click', (e) => {
-            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-                nav.classList.remove('open');
-                toggle.setAttribute('aria-expanded', 'false');
+
+        // ===== Outbound navigation helper (used by Contact button and link interceptor) =====
+        function navigateTo(href) {
+            document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 220);
+        }
+
+        // ===== Smooth outbound navigation (fade out before leaving page) =====
+        document.addEventListener('click', function(e) {
+            const a = e.target.closest('a[href]');
+            if (!a) return;
+            const href = a.getAttribute('href');
+            const target = a.getAttribute('target');
+            // Only intercept relative links back to main site — not external, tel, mailto, or same-page
+            if (href && href.startsWith('../') && target !== '_blank' &&
+                !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                e.preventDefault();
+                document.body.classList.add('page-exit');
+                setTimeout(() => { window.location.href = href; }, 220);
             }
         });
 
-        // Navbar scroll shadow
-        window.addEventListener('scroll', () => {
-            document.querySelector('.bl-navbar').style.boxShadow =
-                window.scrollY > 10 ? '0 1px 0 var(--border), var(--shadow)' : '';
-        }, { passive: true });
+        // ===== Pagination + category filter =====
+        const POSTS_PER_PAGE = 6;
+        let currentPage = 1;
+        let currentCat = 'all';
 
-        // Category filter
         const filterBtns = document.querySelectorAll('.bl-filter-btn');
-        const cards = document.querySelectorAll('#blGrid article');
+        const allCards = Array.from(document.querySelectorAll('#blGrid article'));
+        const pagination = document.getElementById('blPagination');
+        const filterBar = document.querySelector('.bl-filter-bar');
+
+        function getFilteredCards() {
+            if (currentCat === 'all') return allCards;
+            return allCards.filter(c => c.dataset.cat === currentCat);
+        }
+
+        function renderPagination(totalPages) {
+            if (totalPages <= 1) { pagination.style.display = 'none'; return; }
+            pagination.style.display = 'flex';
+            let html = `<button class="bl-page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+            for (let i = 1; i <= totalPages; i++) {
+                html += `<button class="bl-page-btn${i === currentPage ? ' active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+            }
+            html += `<button class="bl-page-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
+            html += `<span class="bl-page-info">Page ${currentPage} of ${totalPages}</span>`;
+            pagination.innerHTML = html;
+        }
+
+        function render() {
+            const filtered = getFilteredCards();
+            allCards.forEach(c => c.style.display = 'none');
+            if (currentCat === 'all') {
+                const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+                const start = (currentPage - 1) * POSTS_PER_PAGE;
+                filtered.slice(start, start + POSTS_PER_PAGE).forEach(c => c.style.display = '');
+                renderPagination(totalPages);
+            } else {
+                filtered.forEach(c => c.style.display = '');
+                pagination.style.display = 'none';
+            }
+        }
+
+        window.goToPage = function(page) {
+            currentPage = page;
+            render();
+            filterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                const cat = btn.dataset.cat;
-                cards.forEach(card => {
-                    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-                });
+                currentCat = btn.dataset.cat;
+                currentPage = 1;
+                render();
             });
         });
+
+        render();
     </script>
 
 </body>
