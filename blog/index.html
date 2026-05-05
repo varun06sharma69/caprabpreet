@@ -33,8 +33,9 @@
             from { opacity: 1; transform: translateY(0); }
             to   { opacity: 0; transform: translateY(-6px); }
         }
-        body { animation: bl-page-in 0.3s ease forwards; }
-        body.page-exit { animation: bl-page-out 0.22s ease forwards !important; }
+        /* Animate the content wrapper, NOT body — keeps position:fixed elements working */
+        .bl-page-content { animation: bl-page-in 0.3s ease forwards; }
+        body.page-exit .bl-page-content { animation: bl-page-out 0.22s ease forwards !important; }
 
         /* Dark hero page header */
         .bl-page-header {
@@ -250,6 +251,8 @@
         </div>
     </nav>
     <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <div class="bl-page-content">
 
     <!-- Page Header -->
     <header class="bl-page-header">
@@ -596,6 +599,8 @@
             <p>&copy; 2026 CA Prabhpreet Singh. All rights reserved. | <a href="../privacy-policy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="../terms.html" style="color: rgba(255,255,255,0.7);">Terms of Service</a></p>
         </div>
     </footer>
+
+    </div><!-- /bl-page-content -->
 
     <script>
         // ===== Navbar height CSS variable =====
