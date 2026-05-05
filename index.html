@@ -572,35 +572,44 @@
         <!-- Mobile pill nav -->
         <div class="svc-mobile-nav" role="navigation" aria-label="Jump to service">
             <a class="svc-pill active" href="#" onclick="svcNavTo('service-notice');return false;">Tax Notices</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-nri');return false;">NRI</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-property');return false;">Property</a>
             <a class="svc-pill" href="#" onclick="svcNavTo('service-taxation');return false;">Taxation</a>
             <a class="svc-pill" href="#" onclick="svcNavTo('service-gst');return false;">GST</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-nri');return false;">NRI</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-property');return false;">Property</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-crossborder');return false;">Cross-Border</a>
             <a class="svc-pill" href="#" onclick="svcNavTo('service-incorporation');return false;">Incorporation</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-loan');return false;">Loans</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-financial');return false;">Financial</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-investment');return false;">Investment</a>
             <a class="svc-pill" href="#" onclick="svcNavTo('service-audit');return false;">Audit</a>
             <a class="svc-pill" href="#" onclick="svcNavTo('service-africa');return false;">Africa</a>
-            <a class="svc-pill" href="#" onclick="svcNavTo('service-crossborder');return false;">Cross-Border</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-financial');return false;">Financial</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-investment');return false;">Investment</a>
+            <a class="svc-pill" href="#" onclick="svcNavTo('service-loan');return false;">Loans</a>
         </div>
 
         <div class="svc-layout">
-            <!-- Left sticky nav (desktop only) -->
+            <!-- Left sticky nav -->
             <nav class="svc-sidebar" aria-label="Service navigation">
                 <p class="svc-sidebar-label">In this section</p>
+
+                <p class="svc-sidebar-group">Tax &amp; Compliance</p>
                 <a class="svc-nav-item active" data-target="service-notice" href="#" onclick="svcNavTo('service-notice');return false;">Tax Notices</a>
-                <a class="svc-nav-item" data-target="service-nri" href="#" onclick="svcNavTo('service-nri');return false;">NRI Advisory</a>
-                <a class="svc-nav-item" data-target="service-property" href="#" onclick="svcNavTo('service-property');return false;">Property Sales</a>
                 <a class="svc-nav-item" data-target="service-taxation" href="#" onclick="svcNavTo('service-taxation');return false;">Taxation</a>
                 <a class="svc-nav-item" data-target="service-gst" href="#" onclick="svcNavTo('service-gst');return false;">GST Services</a>
+
+                <p class="svc-sidebar-group">NRI &amp; Property</p>
+                <a class="svc-nav-item" data-target="service-nri" href="#" onclick="svcNavTo('service-nri');return false;">NRI Advisory</a>
+                <a class="svc-nav-item" data-target="service-property" href="#" onclick="svcNavTo('service-property');return false;">Property Sales</a>
+                <a class="svc-nav-item" data-target="service-crossborder" href="#" onclick="svcNavTo('service-crossborder');return false;">Cross-Border Tax</a>
+
+                <p class="svc-sidebar-group">Business</p>
                 <a class="svc-nav-item" data-target="service-incorporation" href="#" onclick="svcNavTo('service-incorporation');return false;">Company Setup</a>
-                <a class="svc-nav-item" data-target="service-loan" href="#" onclick="svcNavTo('service-loan');return false;">Loan & Finance</a>
-                <a class="svc-nav-item" data-target="service-financial" href="#" onclick="svcNavTo('service-financial');return false;">Financial Planning</a>
-                <a class="svc-nav-item" data-target="service-investment" href="#" onclick="svcNavTo('service-investment');return false;">Investment</a>
                 <a class="svc-nav-item" data-target="service-audit" href="#" onclick="svcNavTo('service-audit');return false;">Global Audit</a>
                 <a class="svc-nav-item" data-target="service-africa" href="#" onclick="svcNavTo('service-africa');return false;">Africa Audit</a>
-                <a class="svc-nav-item" data-target="service-crossborder" href="#" onclick="svcNavTo('service-crossborder');return false;">Cross-Border Tax</a>
+
+                <p class="svc-sidebar-group">Wealth &amp; Finance</p>
+                <a class="svc-nav-item" data-target="service-financial" href="#" onclick="svcNavTo('service-financial');return false;">Financial Planning</a>
+                <a class="svc-nav-item" data-target="service-investment" href="#" onclick="svcNavTo('service-investment');return false;">Investments</a>
+                <a class="svc-nav-item" data-target="service-loan" href="#" onclick="svcNavTo('service-loan');return false;">Loan &amp; Finance</a>
+
                 <div class="svc-sidebar-cta">
                     <p>Not sure where to start?</p>
                     <a href="#" onclick="showPage('contact');return false;">Tell me your situation →</a>
@@ -610,259 +619,316 @@
             <!-- Right: service panels -->
             <div class="svc-content" id="svcContentArea">
 
-            <!-- ===== 1. TAX NOTICES ===== -->
-                <div class="svc-panel svc-featured" id="service-notice">
-                    <span class="svc-cat">Most requested</span>
-                    <h2>Tax Notice Handling</h2>
-                    <p>Got a notice? The section number tells you most of what you need to know. I've resolved 800+ across every type. Most are manageable if you respond correctly and on time — the ones that become expensive are almost always the ones that were ignored.</p>
+                <!-- ===== HERO: Tax Notices ===== -->
+                <div class="svc-panel svc-hero" id="service-notice">
+                    <div class="svc-hero-grid">
+                        <div class="svc-hero-main">
+                            <span class="svc-cat">Most requested</span>
+                            <h2>Tax Notice Handling</h2>
+                            <p>Got a notice? The section number tells you most of what you need to know. I've resolved 800+ across every type. Most are manageable if you respond correctly and on time — the ones that become expensive are almost always the ones that were ignored.</p>
+                            <div class="svc-stats">
+                                <div class="svc-stat"><span class="svc-n">800+</span><span class="svc-l">Cases resolved</span></div>
+                                <div class="svc-stat"><span class="svc-n">24 hr</span><span class="svc-l">Response time</span></div>
+                                <div class="svc-stat"><span class="svc-n">10</span><span class="svc-l">Notice types</span></div>
+                            </div>
+                            <button class="btn-primary svc-btn" onclick="showPage('contact')">Get immediate help →</button>
+                        </div>
+                        <div class="svc-hero-aside">
+                            <p class="svc-hero-aside-label">Notices handled</p>
+                            <ul class="svc-notice-list">
+                                <li>Sec 143(2) — Scrutiny</li>
+                                <li>Sec 148 — Reassessment</li>
+                                <li>Sec 156 — Demand</li>
+                                <li>Sec 131 — Summons</li>
+                                <li>Sec 139(9) — Defective Return</li>
+                                <li>Sec 142(1) — Inquiry</li>
+                                <li>Sec 245 — Refund Adjustment</li>
+                                <li>Sec 133(6) — General Inquiry</li>
+                                <li>Sec 143(1) — Intimation</li>
+                                <li>Sec 154 — Rectification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Tax & Compliance ── -->
+                <div class="svc-section-divider"><span>Tax &amp; Compliance</span></div>
+
+                <div class="svc-panel" id="service-taxation">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                        </div>
+                        <span class="svc-cat">Income tax</span>
+                    </div>
+                    <h2>Taxation Services</h2>
+                    <p>ITR filing for everyone — from straightforward individuals to complex NRI returns with multiple income sources. 1,500+ returns filed, zero penalty record. The work isn't just filing; it's catching what you missed before the department does.</p>
                     <div class="svc-stats">
-                        <div class="svc-stat"><span class="svc-n">800+</span><span class="svc-l">Cases resolved</span></div>
-                        <div class="svc-stat"><span class="svc-n">24 hr</span><span class="svc-l">Response time</span></div>
-                        <div class="svc-stat"><span class="svc-n">10</span><span class="svc-l">Notice types covered</span></div>
+                        <div class="svc-stat"><span class="svc-n">1,500+</span><span class="svc-l">ITRs filed</span></div>
+                        <div class="svc-stat"><span class="svc-n">18+</span><span class="svc-l">Years experience</span></div>
+                        <div class="svc-stat"><span class="svc-n">Zero</span><span class="svc-l">Penalty record</span></div>
                     </div>
                     <div class="svc-chips">
-                        <span class="svc-chip">Sec 143(2) Scrutiny</span>
-                        <span class="svc-chip">Sec 148 Reassessment</span>
-                        <span class="svc-chip">Sec 156 Demand</span>
-                        <span class="svc-chip">Sec 131 Summons</span>
-                        <span class="svc-chip">Sec 139(9) Defective Return</span>
-                        <span class="svc-chip">Sec 142(1) Inquiry</span>
-                        <span class="svc-chip">Sec 245 Refund Adjustment</span>
-                        <span class="svc-chip">Sec 133(6) General Inquiry</span>
-                        <span class="svc-chip">Sec 143(1) Intimation</span>
-                        <span class="svc-chip">Sec 154 Rectification</span>
+                        <span class="svc-chip">ITR filing (all categories)</span>
+                        <span class="svc-chip">Advance tax</span>
+                        <span class="svc-chip">TDS compliance</span>
+                        <span class="svc-chip">Tax audit Sec 44AB</span>
+                        <span class="svc-chip">Deductions &amp; exemptions</span>
+                        <span class="svc-chip">Capital gains</span>
                     </div>
-                    <button class="btn-primary svc-btn" onclick="showPage('contact')">Get immediate help →</button>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Get your ITR sorted →</a>
                 </div>
 
-            <!-- NRI -->
-            <div class="svc-panel" id="service-nri">
-                <span class="svc-cat">NRI taxation</span>
-                <h2>NRI Advisory</h2>
-                <p>India still has a claim on your income from Indian sources — rent, interest, capital gains — whether you're aware of it or not. I map out the full picture for every NRI client: residency status, DTAA claim, ITR filing. The goal is simple: you pay what you legally owe in India. Nothing more.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">800+</span><span class="svc-l">NRI clients</span></div>
-                    <div class="svc-stat"><span class="svc-n">25+</span><span class="svc-l">Countries served</span></div>
-                    <div class="svc-stat"><span class="svc-n">90+</span><span class="svc-l">DTAA countries</span></div>
+                <div class="svc-panel" id="service-gst">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </div>
+                        <span class="svc-cat">Indirect tax</span>
+                    </div>
+                    <h2>GST Services India</h2>
+                    <p>GST is high-compliance — monthly filings, ITC reconciliation, annual returns, audits. Mistakes pile up silently until the department flags them. I handle the full GST lifecycle and clean up past inconsistencies without triggering unnecessary scrutiny.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">GST returns filed</span></div>
+                        <div class="svc-stat"><span class="svc-n">15+</span><span class="svc-l">Industries served</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">GST registration</span>
+                        <span class="svc-chip">GSTR-1 / 3B / 9</span>
+                        <span class="svc-chip">ITC reconciliation</span>
+                        <span class="svc-chip">GST refund claims</span>
+                        <span class="svc-chip">GST audit (GSTR-9C)</span>
+                        <span class="svc-chip">Notice reply &amp; litigation</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Sort your GST →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Residency status</span>
-                    <span class="svc-chip">DTAA claims</span>
-                    <span class="svc-chip">Form 15CA / 15CB</span>
-                    <span class="svc-chip">NRO / NRE compliance</span>
-                    <span class="svc-chip">FEMA & RBI</span>
-                    <span class="svc-chip">NRI ITR filing</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Talk to us about NRI filing →</a>
-            </div>
 
-            <!-- Property -->
-            <div class="svc-panel" id="service-property">
-                <span class="svc-cat">Property sales</span>
-                <h2>Property Sales & NRI Property</h2>
-                <p>Selling Indian property from abroad catches most NRIs off guard. The buyer deducts 20–30% TDS. You need Form 15CB before the money moves. Capital gains depends on purchase date and holding period. Then there's the ITR afterward. I've handled 200+ of these — it's a specific sequence and I know it cold.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">200+</span><span class="svc-l">Property sales</span></div>
-                    <div class="svc-stat"><span class="svc-n">4</span><span class="svc-l">Major cities</span></div>
-                </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Capital gains planning</span>
-                    <span class="svc-chip">TDS for NRI sellers</span>
-                    <span class="svc-chip">Form 15CA / 15CB</span>
-                    <span class="svc-chip">Sec 54 / 54F exemption</span>
-                    <span class="svc-chip">Rental income tax</span>
-                    <span class="svc-chip">FEMA compliance</span>
-                </div>
-                <p class="svc-note">Cities: Delhi NCR · Ludhiana & Tricity · Mumbai & Pune · Bangalore</p>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Discuss your property sale →</a>
-            </div>
+                <!-- ── NRI & Property ── -->
+                <div class="svc-section-divider"><span>NRI &amp; Property</span></div>
 
-            <!-- Taxation -->
-            <div class="svc-panel" id="service-taxation">
-                <span class="svc-cat">Income tax</span>
-                <h2>Taxation Services</h2>
-                <p>ITR filing for everyone — from straightforward individuals to complex NRI returns with multiple income sources. 1,500+ returns filed, zero penalty record. The work isn't just filing; it's catching what you missed before the department does.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">1,500+</span><span class="svc-l">ITRs filed</span></div>
-                    <div class="svc-stat"><span class="svc-n">18+</span><span class="svc-l">Years experience</span></div>
-                    <div class="svc-stat"><span class="svc-n">Zero</span><span class="svc-l">Penalty record</span></div>
+                <div class="svc-panel" id="service-nri">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <span class="svc-cat">NRI taxation</span>
+                    </div>
+                    <h2>NRI Advisory</h2>
+                    <p>India still has a claim on your income from Indian sources — rent, interest, capital gains — whether you're aware of it or not. I map out the full picture for every NRI client: residency status, DTAA claim, ITR filing. The goal is simple: you pay what you legally owe in India. Nothing more.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">800+</span><span class="svc-l">NRI clients</span></div>
+                        <div class="svc-stat"><span class="svc-n">25+</span><span class="svc-l">Countries served</span></div>
+                        <div class="svc-stat"><span class="svc-n">90+</span><span class="svc-l">DTAA countries</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Residency status</span>
+                        <span class="svc-chip">DTAA claims</span>
+                        <span class="svc-chip">Form 15CA / 15CB</span>
+                        <span class="svc-chip">NRO / NRE compliance</span>
+                        <span class="svc-chip">FEMA &amp; RBI</span>
+                        <span class="svc-chip">NRI ITR filing</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Talk to us about NRI filing →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">ITR filing (all categories)</span>
-                    <span class="svc-chip">Advance tax</span>
-                    <span class="svc-chip">TDS compliance</span>
-                    <span class="svc-chip">Tax audit Sec 44AB</span>
-                    <span class="svc-chip">Deductions & exemptions</span>
-                    <span class="svc-chip">Capital gains</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Get your ITR sorted →</a>
-            </div>
 
-            <!-- GST -->
-            <div class="svc-panel" id="service-gst">
-                <span class="svc-cat">Indirect tax</span>
-                <h2>GST Services India</h2>
-                <p>GST is high-compliance — monthly filings, ITC reconciliation, annual returns, audits. Mistakes pile up silently until the department flags them. I handle the full GST lifecycle and clean up past inconsistencies without triggering unnecessary scrutiny.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">GST returns filed</span></div>
-                    <div class="svc-stat"><span class="svc-n">Multi</span><span class="svc-l">sector experience</span></div>
+                <div class="svc-panel" id="service-property">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <span class="svc-cat">Property sales</span>
+                    </div>
+                    <h2>Property Sales &amp; NRI Property</h2>
+                    <p>Selling Indian property from abroad catches most NRIs off guard. The buyer deducts 20–30% TDS. You need Form 15CB before the money moves. Capital gains depends on purchase date and holding period. Then there's the ITR afterward. I've handled 200+ of these — it's a specific sequence and I know it cold.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">200+</span><span class="svc-l">Property sales handled</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Capital gains planning</span>
+                        <span class="svc-chip">TDS for NRI sellers</span>
+                        <span class="svc-chip">Form 15CA / 15CB</span>
+                        <span class="svc-chip">Sec 54 / 54F exemption</span>
+                        <span class="svc-chip">Rental income tax</span>
+                        <span class="svc-chip">FEMA compliance</span>
+                    </div>
+                    <p class="svc-note">Cities covered: Delhi NCR · Ludhiana &amp; Tricity · Mumbai &amp; Pune · Bangalore</p>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Discuss your property sale →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">GST registration</span>
-                    <span class="svc-chip">GSTR-1 / 3B / 9</span>
-                    <span class="svc-chip">ITC reconciliation</span>
-                    <span class="svc-chip">GST refund claims</span>
-                    <span class="svc-chip">GST audit (GSTR-9C)</span>
-                    <span class="svc-chip">Notice reply & litigation</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Sort your GST →</a>
-            </div>
 
-            <!-- Company Incorporation -->
-            <div class="svc-panel" id="service-incorporation">
-                <span class="svc-cat">Business setup</span>
-                <h2>Company Incorporation</h2>
-                <p>Setting up a company in India is more than MCA registration — you need the right structure from day one, or you spend years fixing it. For NRIs and foreign nationals, FEMA and RBI compliance must be built in from the start. End to end, handled.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">100+</span><span class="svc-l">Companies registered</span></div>
-                    <div class="svc-stat"><span class="svc-n">NRI</span><span class="svc-l">ready</span></div>
+                <div class="svc-panel" id="service-crossborder">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                        </div>
+                        <span class="svc-cat">International tax</span>
+                    </div>
+                    <h2>Cross-Border Tax Planning</h2>
+                    <p>If you earn income in India while living abroad — or vice versa — you're potentially being taxed twice on the same money. India has DTAA treaties with 90+ countries to prevent this. But the treaty doesn't apply automatically. Most NRIs I talk to have never claimed it. That's usually the first thing we fix.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">90+</span><span class="svc-l">DTAA countries</span></div>
+                        <div class="svc-stat"><span class="svc-n">25+</span><span class="svc-l">Countries served</span></div>
+                        <div class="svc-stat"><span class="svc-n">Free</span><span class="svc-l">Initial review</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">DTAA treaty analysis</span>
+                        <span class="svc-chip">Tax residency planning</span>
+                        <span class="svc-chip">India–UK structuring</span>
+                        <span class="svc-chip">India–Australia structuring</span>
+                        <span class="svc-chip">India–USA structuring</span>
+                        <span class="svc-chip">Foreign tax credit claims</span>
+                        <span class="svc-chip">Transfer pricing</span>
+                        <span class="svc-chip">FEMA &amp; RBI compliance</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Book a cross-border review →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Private Limited (Pvt. Ltd.)</span>
-                    <span class="svc-chip">LLP</span>
-                    <span class="svc-chip">OPC</span>
-                    <span class="svc-chip">Section 8 Non-Profit</span>
-                    <span class="svc-chip">Foreign subsidiary</span>
-                    <span class="svc-chip">MCA / ROC filing</span>
-                    <span class="svc-chip">DIN & DSC</span>
-                    <span class="svc-chip">PAN · TAN · GST post-setup</span>
-                    <span class="svc-chip">FEMA for NRI directors</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Start your company →</a>
-            </div>
 
-            <!-- Loan & Finance -->
-            <div class="svc-panel" id="service-loan">
-                <span class="svc-cat">Loan & finance</span>
-                <h2>Loan & Finance Services</h2>
-                <p>Whether you're an Indian resident buying property, a business needing working capital, or an NRI looking for a home loan in India — the loan process has more moving parts than most people expect. NRI clients get dedicated guidance on FEMA-permitted loan types and repatriation rules.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">NRI</span><span class="svc-l">& Indian clients</span></div>
-                    <div class="svc-stat"><span class="svc-n">FEMA</span><span class="svc-l">compliant</span></div>
-                </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Home loan (resident & NRI)</span>
-                    <span class="svc-chip">Business & working capital</span>
-                    <span class="svc-chip">NRI loan eligibility</span>
-                    <span class="svc-chip">NRI mortgage structuring</span>
-                    <span class="svc-chip">Loan against property</span>
-                    <span class="svc-chip">Lender liaison</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Get loan guidance →</a>
-            </div>
+                <!-- ── Business & Corporate ── -->
+                <div class="svc-section-divider"><span>Business &amp; Corporate</span></div>
 
-            <!-- Financial Optimization -->
-            <div class="svc-panel" id="service-financial">
-                <span class="svc-cat">Wealth planning</span>
-                <h2>Financial Optimization</h2>
-                <p>Most people with decent income are overpaying tax — legally, just through not claiming what they're entitled to. Sec 80C–80U deductions, HUF structures, capital gains timing. The initial review is free, and it usually finds more than people expected.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">Wealth plans</span></div>
-                    <div class="svc-stat"><span class="svc-n">Free</span><span class="svc-l">initial review</span></div>
+                <div class="svc-panel" id="service-incorporation">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                        </div>
+                        <span class="svc-cat">Business setup</span>
+                    </div>
+                    <h2>Company Incorporation</h2>
+                    <p>Setting up a company in India is more than MCA registration — you need the right structure from day one, or you spend years fixing it. For NRIs and foreign nationals, FEMA and RBI compliance must be built in from the start. End to end, handled.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">100+</span><span class="svc-l">Companies registered</span></div>
+                        <div class="svc-stat"><span class="svc-n">5+</span><span class="svc-l">Entity structures</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Private Limited (Pvt. Ltd.)</span>
+                        <span class="svc-chip">LLP</span>
+                        <span class="svc-chip">OPC</span>
+                        <span class="svc-chip">Section 8 Non-Profit</span>
+                        <span class="svc-chip">Foreign subsidiary</span>
+                        <span class="svc-chip">MCA / ROC filing</span>
+                        <span class="svc-chip">DIN &amp; DSC</span>
+                        <span class="svc-chip">PAN · TAN · GST post-setup</span>
+                        <span class="svc-chip">FEMA for NRI directors</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Start your company →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Sec 80C–80U deductions</span>
-                    <span class="svc-chip">HUF planning</span>
-                    <span class="svc-chip">Investment restructuring</span>
-                    <span class="svc-chip">Capital gains timing</span>
-                    <span class="svc-chip">Business expense optimisation</span>
-                    <span class="svc-chip">Long-term wealth preservation</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Book a free review →</a>
-            </div>
 
-            <!-- Investment -->
-            <div class="svc-panel" id="service-investment">
-                <span class="svc-cat">Investment</span>
-                <h2>Investment Advisory</h2>
-                <p>Portfolio analysis with tax as the starting point — not an afterthought. Mutual funds, equity, NRI investment in India, retirement corpus, estate planning. Build wealth without creating a tax problem down the road.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">Portfolios advised</span></div>
-                    <div class="svc-stat"><span class="svc-n">Tax-first</span><span class="svc-l">approach</span></div>
+                <div class="svc-panel" id="service-audit">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <span class="svc-cat">Audit &amp; assurance</span>
+                    </div>
+                    <h2>Global Audit Services</h2>
+                    <p>Statutory audit, internal audit, GST reconciliation, FEMA compliance for cross-border operations. Most useful for exporters, international investors, and businesses that have grown to where annual filing isn't enough.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">200+</span><span class="svc-l">Businesses audited</span></div>
+                        <div class="svc-stat"><span class="svc-n">ICAI</span><span class="svc-l">Certified auditors</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Statutory audit (Companies Act)</span>
+                        <span class="svc-chip">Internal audit</span>
+                        <span class="svc-chip">Transfer pricing</span>
+                        <span class="svc-chip">FEMA audit</span>
+                        <span class="svc-chip">IFRS reporting</span>
+                        <span class="svc-chip">GST reconciliation</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Discuss audit requirements →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Portfolio analysis</span>
-                    <span class="svc-chip">Tax-efficient MF & equity</span>
-                    <span class="svc-chip">NRI investment in India</span>
-                    <span class="svc-chip">Retirement corpus</span>
-                    <span class="svc-chip">Succession planning</span>
-                    <span class="svc-chip">Risk profiling</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Plan your investments →</a>
-            </div>
 
-            <!-- Global Audit -->
-            <div class="svc-panel" id="service-audit">
-                <span class="svc-cat">Audit & assurance</span>
-                <h2>Global Audit Services</h2>
-                <p>Statutory audit, internal audit, GST reconciliation, FEMA compliance for cross-border operations. Most useful for exporters, international investors, and businesses that have grown to where annual filing isn't enough.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">200+</span><span class="svc-l">Businesses audited</span></div>
-                    <div class="svc-stat"><span class="svc-n">ICAI</span><span class="svc-l">certified auditors</span></div>
+                <div class="svc-panel" id="service-africa">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <span class="svc-cat">Africa operations</span>
+                    </div>
+                    <h2>Africa Audit Services</h2>
+                    <p>Indian businesses expanding into Africa often underestimate how different the regulatory landscape is — and how it interacts with FEMA, RBI, and Indian tax law back home. We've worked across 15+ African markets. This is about making sure neither side creates a compliance gap you find out about at the wrong moment.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">15+</span><span class="svc-l">African countries</span></div>
+                        <div class="svc-stat"><span class="svc-n">IFRS</span><span class="svc-l">Compliant reporting</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Statutory audit (African subsidiaries)</span>
+                        <span class="svc-chip">India–Africa DTAA</span>
+                        <span class="svc-chip">Transfer pricing</span>
+                        <span class="svc-chip">FEMA &amp; RBI for Africa</span>
+                        <span class="svc-chip">AML audit</span>
+                        <span class="svc-chip">Fund repatriation</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Talk about Africa operations →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Statutory audit (Companies Act)</span>
-                    <span class="svc-chip">Internal audit</span>
-                    <span class="svc-chip">Transfer pricing</span>
-                    <span class="svc-chip">FEMA audit</span>
-                    <span class="svc-chip">IFRS reporting</span>
-                    <span class="svc-chip">GST reconciliation</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Discuss audit requirements →</a>
-            </div>
 
-            <!-- Africa -->
-            <div class="svc-panel" id="service-africa">
-                <span class="svc-cat">Africa operations</span>
-                <h2>Africa Audit Services</h2>
-                <p>Indian businesses expanding into Africa often underestimate how different the regulatory landscape is — and how it interacts with FEMA, RBI, and Indian tax law back home. We've worked across 15+ African markets. This is about making sure neither side creates a compliance gap you find out about at the wrong moment.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">15+</span><span class="svc-l">African countries</span></div>
-                    <div class="svc-stat"><span class="svc-n">IFRS</span><span class="svc-l">compliant</span></div>
-                </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">Statutory audit (African subsidiaries)</span>
-                    <span class="svc-chip">India–Africa DTAA</span>
-                    <span class="svc-chip">Transfer pricing</span>
-                    <span class="svc-chip">FEMA & RBI for Africa</span>
-                    <span class="svc-chip">AML audit</span>
-                    <span class="svc-chip">Fund repatriation</span>
-                </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Talk about Africa operations →</a>
-            </div>
+                <!-- ── Wealth & Finance ── -->
+                <div class="svc-section-divider"><span>Wealth &amp; Finance</span></div>
 
-            <!-- Cross-Border -->
-            <div class="svc-panel" id="service-crossborder">
-                <span class="svc-cat">International tax</span>
-                <h2>Cross-Border Tax Planning</h2>
-                <p>If you earn income in India while living abroad — or vice versa — you're potentially being taxed twice on the same money. India has DTAA treaties with 90+ countries to prevent this. But the treaty doesn't apply automatically. Most NRIs I talk to have never claimed it. That's usually the first thing we fix.</p>
-                <div class="svc-stats">
-                    <div class="svc-stat"><span class="svc-n">90+</span><span class="svc-l">DTAA countries</span></div>
-                    <div class="svc-stat"><span class="svc-n">25+</span><span class="svc-l">Countries served</span></div>
-                    <div class="svc-stat"><span class="svc-n">Free</span><span class="svc-l">initial review</span></div>
+                <div class="svc-panel" id="service-financial">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <span class="svc-cat">Wealth planning</span>
+                    </div>
+                    <h2>Financial Optimization</h2>
+                    <p>Most people with decent income are overpaying tax — legally, just through not claiming what they're entitled to. Sec 80C–80U deductions, HUF structures, capital gains timing. The initial review is free, and it usually finds more than people expected.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">Wealth plans</span></div>
+                        <div class="svc-stat"><span class="svc-n">Free</span><span class="svc-l">Initial review</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Sec 80C–80U deductions</span>
+                        <span class="svc-chip">HUF planning</span>
+                        <span class="svc-chip">Investment restructuring</span>
+                        <span class="svc-chip">Capital gains timing</span>
+                        <span class="svc-chip">Business expense optimisation</span>
+                        <span class="svc-chip">Long-term wealth preservation</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Book a free review →</a>
                 </div>
-                <div class="svc-chips">
-                    <span class="svc-chip">DTAA treaty analysis</span>
-                    <span class="svc-chip">Tax residency planning</span>
-                    <span class="svc-chip">India–UK structuring</span>
-                    <span class="svc-chip">India–Australia structuring</span>
-                    <span class="svc-chip">India–USA structuring</span>
-                    <span class="svc-chip">Foreign tax credit claims</span>
-                    <span class="svc-chip">Transfer pricing</span>
-                    <span class="svc-chip">FEMA & RBI compliance</span>
+
+                <div class="svc-panel" id="service-investment">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        </div>
+                        <span class="svc-cat">Investment</span>
+                    </div>
+                    <h2>Investment Advisory</h2>
+                    <p>Portfolio analysis with tax as the starting point — not an afterthought. Mutual funds, equity, NRI investment in India, retirement corpus, estate planning. Build wealth without creating a tax problem down the road.</p>
+                    <div class="svc-stats">
+                        <div class="svc-stat"><span class="svc-n">500+</span><span class="svc-l">Portfolios advised</span></div>
+                    </div>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Portfolio analysis</span>
+                        <span class="svc-chip">Tax-efficient MF &amp; equity</span>
+                        <span class="svc-chip">NRI investment in India</span>
+                        <span class="svc-chip">Retirement corpus</span>
+                        <span class="svc-chip">Succession planning</span>
+                        <span class="svc-chip">Risk profiling</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Plan your investments →</a>
                 </div>
-                <a class="svc-link" href="#" onclick="showPage('contact');return false;">Book a cross-border review →</a>
-            </div>
+
+                <div class="svc-panel" id="service-loan">
+                    <div class="svc-panel-head">
+                        <div class="svc-icon">
+                            <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        </div>
+                        <span class="svc-cat">Loan &amp; finance</span>
+                    </div>
+                    <h2>Loan &amp; Finance Services</h2>
+                    <p>Whether you're an Indian resident buying property, a business needing working capital, or an NRI looking for a home loan in India — the loan process has more moving parts than most people expect. NRI clients get dedicated guidance on FEMA-permitted loan types and repatriation rules.</p>
+                    <div class="svc-chips">
+                        <span class="svc-chip">Home loan (resident &amp; NRI)</span>
+                        <span class="svc-chip">Business &amp; working capital</span>
+                        <span class="svc-chip">NRI loan eligibility</span>
+                        <span class="svc-chip">NRI mortgage structuring</span>
+                        <span class="svc-chip">Loan against property</span>
+                        <span class="svc-chip">Lender liaison</span>
+                    </div>
+                    <a class="svc-link" href="#" onclick="showPage('contact');return false;">Get loan guidance →</a>
+                </div>
 
             </div><!-- /svc-content -->
         </div><!-- /svc-layout -->
@@ -1453,7 +1519,7 @@
                 a.classList.toggle('active', a.dataset.target === targetId);
             });
             document.querySelectorAll('.svc-pill').forEach((pill, i) => {
-                const panelIds = ['service-notice','service-nri','service-property','service-taxation','service-gst','service-incorporation','service-loan','service-financial','service-investment','service-audit','service-africa','service-crossborder'];
+                const panelIds = ['service-notice','service-taxation','service-gst','service-nri','service-property','service-crossborder','service-incorporation','service-audit','service-africa','service-financial','service-investment','service-loan'];
                 pill.classList.toggle('active', panelIds[i] === targetId);
             });
         }
