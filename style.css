@@ -2011,7 +2011,7 @@ body.modal-open { overflow: hidden; }
     box-shadow: 0 8px 32px rgba(13,27,42,0.20), 0 2px 8px rgba(13,27,42,0.14) !important;
 }
 .svc-hero:hover {
-    transform: translateY(-3px);
+    transform: none;
     border-color: transparent !important;
     box-shadow: 0 16px 48px rgba(13,27,42,0.24), 0 4px 16px rgba(13,27,42,0.16) !important;
 }
@@ -2111,10 +2111,12 @@ body.modal-open { overflow: hidden; }
     .svc-hero-grid { grid-template-columns: 1fr; }
     .svc-hero-aside { display: none; }
     .svc-hero-main { padding: 2rem 1.5rem; }
+    .svc-hero-extra { padding: 1.6rem 1.5rem; }
 }
 @media (max-width: 480px) {
     .svc-page-wrap { padding: 0 1rem 4rem; }
     .svc-panel { padding: 1.4rem 1.1rem; border-radius: 10px; }
     .svc-n { font-size: 1.4rem; }
     .svc-stat { padding: 0.75rem 1rem; }
+    .svc-hero-extra { padding: 1.4rem 1.1rem; }
 }
